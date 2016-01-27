@@ -164,19 +164,49 @@
             <div class="col-md-9" role="main">
 
 <h3 id="vultr">Vultr</h3>
-<p><a href="http://www.vultr.com/?ref=6870843">Vultr</a> has some great support for using netboot.xyz right out of the box.  </p>
+<p><a href="http://www.vultr.com/?ref=6870843">Vultr</a> has some great support for using
+netboot.xyz right out of the box.</p>
 <h3 id="boot-from-iso">Boot from ISO</h3>
-<p>Once you've logged into the console, select ISOs.  In the remote URLs box, enter in the URL of a netboot.xyz DHCP ISO and press upload:</p>
+<p>Once you've logged into the console, select ISOs.  In the remote URLs box,
+enter in the URL of a netboot.xyz DHCP ISO and press upload:</p>
 <pre><code>https://boot.netboot.xyz/ipxe/netboot.xyz-dhcp.iso
 </code></pre>
-<p>Go back to the main console screen and press "Deploy New Instance".  </p>
-<p>Under Operating Systems, select <em>Custom</em>.  Select the ISO you just uploaded and <em>Place Order</em>.  In a few minutes the instance will have booted.  You will then want to go the main console and select <em>Manage</em> next to the instance you just launched.  Under Server Actions, select <em>View Console</em>.  At this point you should be in the netboot.xyz menu.  </p>
-<p>You can then choose your option and install the OS of your choice.  Once you've completed installation or when you are done with netboot.xyz, select Custom ISO from the Server Manager page and click <em>Remove ISO</em>.  That will remove the ISO and reboot the instance.</p>
+<p>Go back to the main console screen and press "Deploy New Instance". Follow
+these steps:</p>
+<ul>
+<li>Select <em>Custom</em> for the operating system</li>
+<li>Select the ISO you uploaded</li>
+<li>Click <em>Place Order</em></li>
+</ul>
+<p>The instance should be online in a few minutes.  Once it's online, go to the
+main account page that lists all of your instances.  Click <em>Manage</em> next to the
+instance you just launched, and then click <em>View Console</em> under
+<em>Server Actions</em>. When the console appears, you should see the netboot.xyz
+iPXE menu.</p>
+<p>When you've completed the OS installation, select <em>Custom ISO</em> from the Server
+Manager page and click <em>Remove ISO</em>.  The ISO will be removed from your
+instance and it will reboot.</p>
 <h3 id="boot-from-ipxe-chain-url">Boot from iPXE Chain URL</h3>
-<p>At the main console screen and press <em>Deploy New Instance</em>.  Under Operating Systems, select <em>Custom</em>.  Under the Virtual ISO section, select iPXE.  Set the chain URL to:</p>
-<pre><code>https://boot.netboot.xyz
-</code></pre>
-<p>and <em>Place Order</em>.  In a few minutes the instance will have booted.  You will then want to go the main managemnt console and select <em>Manage</em> next to the instance you just launched.  Under Server Actions, select <em>View Console</em>.  You should at this point be in the netboot.xyz menu.  You can then choose your option and install the OS of your choice.  Once you've completed installation or when you are done with netboot.xyz, you should be able to reboot into your OS.</p></div>
+<p>Using an iPXE chain url may be easier for some users.  Follow these steps:</p>
+<ul>
+<li>Click <em>Deploy New Instance</em></li>
+<li>Select <em>Custom</em> for the operating system</li>
+<li>Select <em>iPXE</em> in the Virtual ISO section</li>
+<li>Set the chain URL to <code>https://boot.netboot.xyz</code></li>
+<li>Click <em>Place Order</em></li>
+</ul>
+<p>The instance will boot within a few minutes.  Once it boots, you'll have five
+minutes to launch a console and choose an option from the netboot.xyz menu:</p>
+<ul>
+<li>Go back to your account home page with your instances listed</li>
+<li>Click <em>Manage</em> next to the instance you just launched</li>
+<li>Click <em>View Console</em> in the <em>Server Actions</em> section</li>
+<li>Choose the OS you want to deploy in the netboot.xyz menu</li>
+<li>Complete the OS installation</li>
+</ul>
+<p>Once you've finished the installation, reboot the instance as you normally
+would.  Vultr will automatically reboot your virtual machine into the OS you
+deployed.</p></div>
         </div>
 
         <footer class="col-md-12">
