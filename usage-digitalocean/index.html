@@ -174,7 +174,7 @@
 <p>Tests were done using a <a href="https://getfedora.org">Fedora 23</a> instance on <a href="https://m.do.co/c/ab4e8f17ba0d">Digital Ocean</a>.</p>
 <h3 id="booting-from-grub2">Booting from Grub2</h3>
 <h4 id="download-an-ipxe-linux-kernel">Download an iPXE linux kernel</h4>
-<p>Obtain an iPXE generic kernel <a href="http://boot.netboot.xyz/ipxe/generic-ipxe.lkrn">here</a> or <a href="http://ipxe.org/download">compile your own</a> and save it to /boot/generic-ipxe.lkrn.</p>
+<p>Obtain an iPXE generic kernel <a href="https://boot.netboot.xyz/ipxe/generic-ipxe.lkrn">here</a> or <a href="http://ipxe.org/download">compile your own</a> and save it to /boot/generic-ipxe.lkrn.</p>
 <h4 id="create-a-netbootxyz-initrd-file">Create a netboot.xyz initrd file</h4>
 <p>The netboot.xyz initrd file contains the script necessary to bring the instance on the network and reach out to netboot.xyz.</p>
 <p>Save as /boot/netboot.xyz-initrd (replace your networking information where appropriate):</p>
@@ -186,7 +186,7 @@ set net0/netmask &lt;instance public netmask&gt;
 set net0/gateway &lt;instance public gateway&gt;
 set dns &lt;instance dns address&gt;
 ifopen net0
-chain --autofree http://boot.netboot.xyz
+chain --autofree https://boot.netboot.xyz
 </code></pre>
 <h4 id="add-a-grub2-custom-entry">Add a Grub2 custom entry</h4>
 <p>Add the following entry to /etc/grub.d/40_custom:</p>

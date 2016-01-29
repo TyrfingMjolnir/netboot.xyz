@@ -166,7 +166,7 @@
 <h3 id="booting-from-dhcp-and-tftp">Booting from DHCP and TFTP</h3>
 <p>If you want to utilize netboot.xyz from your home or office network, it's relatively easy to set up.  It will allow all of your devices on your network to have netboot.xyz available whenever you need it by just changing the boot order on your device, selecting network boot, or manually selecting the device to boot.</p>
 <h4 id="dhcp-server-setup">DHCP Server Setup</h4>
-<p>You will have to tell your DHCP server to provide a "next-server", the address of a TFTP server on your network, and a "filename", the <a href="http://boot.netboot.xyz/ipxe/netboot.xyz-dhcp.kpxe">netboot.xyz DHCP boot file</a>.  When your clients boot up, if they are set to network boot, they'll automatically get a valid DHCP address, pull down the netboot.xyz iPXE bootloader and load up the Operating System menu.  </p>
+<p>You will have to tell your DHCP server to provide a "next-server", the address of a TFTP server on your network, and a "filename", the <a href="https://boot.netboot.xyz/ipxe/netboot.xyz-dhcp.kpxe">netboot.xyz DHCP boot file</a>.  When your clients boot up, if they are set to network boot, they'll automatically get a valid DHCP address, pull down the netboot.xyz iPXE bootloader and load up the Operating System menu.  </p>
 <p>Example:</p>
 <pre><code>next-server "1.2.3.4"
 filename "netboot.xyz-dhcp.kpxe"
@@ -179,7 +179,7 @@ tftp-root=/var/lib/tftp
 dhcp-boot=netboot.xyz-dhcp.kpxe
 </code></pre>
 <h4 id="regular-and-undionly-boot-files">Regular and Undionly Boot Files</h4>
-<p>If you experiencing issues with the regular <a href="http://boot.netboot.xyz/ipxe/netboot.xyz-dhcp.kpxe">netboot.xyz-dhcp.kpxe</a> bootloader, you can try and use the <a href="http://boot.netboot.xyz/ipxe/netboot.xyz-dhcp-undionly.kpxe">netboot.xyz-dhcp-undionly.kpxe</a> bootloader.  The regular bootloader includes common NIC drivers in the iPXE image, while the undionly loader will piggyback off the NIC boot firmware.</p></div>
+<p>If you experiencing issues with the regular <a href="https://boot.netboot.xyz/ipxe/netboot.xyz-dhcp.kpxe">netboot.xyz-dhcp.kpxe</a> bootloader, you can try and use the <a href="https://boot.netboot.xyz/ipxe/netboot.xyz-dhcp-undionly.kpxe">netboot.xyz-dhcp-undionly.kpxe</a> bootloader.  The regular bootloader includes common NIC drivers in the iPXE image, while the undionly loader will piggyback off the NIC boot firmware.</p></div>
         </div>
 
         <footer class="col-md-12">
