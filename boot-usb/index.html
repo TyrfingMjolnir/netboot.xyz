@@ -70,21 +70,29 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Boot from... <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
-                        <li >
-                            <a href="../boot-ipxe/">iPXE</a>
-                        </li>
+                        
+<li >
+    <a href="../boot-ipxe/">iPXE</a>
+</li>
+
                     
-                        <li >
-                            <a href="../boot-iso/">ISO</a>
-                        </li>
+                        
+<li >
+    <a href="../boot-iso/">ISO</a>
+</li>
+
                     
-                        <li >
-                            <a href="../boot-tftp/">TFTP</a>
-                        </li>
+                        
+<li >
+    <a href="../boot-tftp/">TFTP</a>
+</li>
+
                     
-                        <li class="active">
-                            <a href="./">USB</a>
-                        </li>
+                        
+<li class="active">
+    <a href="./">USB</a>
+</li>
+
                     
                     </ul>
                 </li>
@@ -95,17 +103,23 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Provider Usage <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
-                        <li >
-                            <a href="../usage-digitalocean/">Digital Ocean</a>
-                        </li>
+                        
+<li >
+    <a href="../usage-digitalocean/">Digital Ocean</a>
+</li>
+
                     
-                        <li >
-                            <a href="../usage-rackspace/">Rackspace</a>
-                        </li>
+                        
+<li >
+    <a href="../usage-rackspace/">Rackspace</a>
+</li>
+
                     
-                        <li >
-                            <a href="../usage-vultr/">Vultr</a>
-                        </li>
+                        
+<li >
+    <a href="../usage-vultr/">Vultr</a>
+</li>
+
                     
                     </ul>
                 </li>
@@ -178,8 +192,7 @@
 <p><em>Warning: Backup your important data before using USB as it will overwrite anything on the USB key.</em></p>
 <p>Download a netboot.xyz USB disk:</p>
 <ul>
-<li><a href="https://boot.netboot.xyz/ipxe/netboot.xyz-dhcp.usb">dhcp</a> - Automatically detects your networking</li>
-<li><a href="https://boot.netboot.xyz/ipxe/netboot.xyz-static.usb">static</a> - Prompts for manual entry of your networking information</li>
+<li><a href="https://boot.netboot.xyz/ipxe/netboot.xyz.usb">netboot.xyz</a> </li>
 </ul>
 <h3 id="creating-usb-key-on-linux">Creating USB Key on Linux</h3>
 <p>Insert a USB key in your compute and find the device name. Then use following command:</p>
@@ -205,7 +218,7 @@
 </code></pre>
 <p>(replace N with the disk number from the last command; in the previous example, N would be 2).</p>
 <p><strong>Execute:</strong></p>
-<pre><code>sudo dd if=netboot.xyz-dhcp.usb of=/dev/rdiskN bs=1m
+<pre><code>sudo dd if=netboot.xyz.usb of=/dev/rdiskN bs=1m
 </code></pre>
 <ul>
 <li>Using /dev/rdisk instead of /dev/disk may be faster</li>
