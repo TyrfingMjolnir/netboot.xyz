@@ -8,15 +8,24 @@ goto ${menu}
 :manjaro
 set os Manjaro Linux
 menu ${os} Installers
-item --gap ${os} 16.02
-item cinnamon ${space} ${os} 16.02 Cinnamon Minimal [ISO]
-choose version || goto manjaro_exit
+item --gap ${os} Minimal ISOs
+item cinnamon ${space} ${os} 16.02 Cinnamon
+item deepin ${space} ${os} 16.03 Deepin
+choose manjaro_version || goto manjaro_exit
+iseq arch x86_64 && set arch_type x86_64 || set arch_type i686
+goto ${manjaro_version}
+
+:cinnamon
+set manjaro_dir Cinnamon/2016.02/${manjaro_version}-minimal/${arch_type}/manjaro-${manjaro_version}-minimal-16.02-${arch_type}.iso/download
+goto manjaro_boot
+
+:deepin
+set manjaro_dir Deepin/2016.03/${manjaro_version}-minimal/manjaro-${manjaro_version}-minimal-16.03-${arch_type}.iso/download
 goto manjaro_boot
 
 :manjaro_boot
-iseq arch x86_64 && set arch_type x86_64 || set arch_type i686
 kernel ${memdisk} iso raw
-initrd https://sourceforge.net/projects/manjarolinux/files/community/Cinnamon/2016.02/${version}-minimal/${arch_type}/manjaro-${version}-minimal-16.02-${arch_type}.iso/download
+initrd https://sourceforge.net/projects/manjarolinux/files/community/${manjaro_dir}
 boot
 goto manjaro_exit
 
