@@ -18,10 +18,12 @@ item ubuntu ${space} Ubuntu
 item --gap All Others:
 item antergos ${space} Antergos
 item architect ${space} Architect - The Arch Linux installer
+item bodhi ${space} Bodhi 
 item coreos ${space} CoreOS
 item rancheros ${space} RancherOS
 item scientific ${space} Scientific
 item slackware ${space} Slackware
+item solus ${space} Solus 
 item tinycore ${space} Tiny Core Linux
 # Options
 item --gap Options:
