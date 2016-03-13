@@ -1,0 +1,23 @@
+#!ipxe
+
+# Bodhi Linux
+# http://www.bodhilinux.com/
+
+goto ${menu}
+
+:bodhi
+set os Architect Linux
+menu ${os} Installers
+item x86_64 ${space} ${os} Latest [ISO]
+choose version || goto bodhi_exit
+goto bodhi_boot
+
+:bodhi_boot
+kernel ${memdisk} iso raw
+initrd https://sourceforge.net/projects/bodhilinux/files/3.1.1/bodhi-3.1.1-64.iso/download
+boot
+goto bodhi_exit
+
+:bodhi_exit
+clear menu
+exit 0
