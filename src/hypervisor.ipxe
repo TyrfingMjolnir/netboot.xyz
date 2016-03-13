@@ -6,6 +6,7 @@ goto ${menu} ||
 menu Hypervisor Installers - [ ${arch} ]
 item --gap Citrix XenServer
 item xenserver ${space} Citrix XenServer
+item SmartOS ${space} Joyent SmartOS
 choose menu || goto hypervisor_exit
 echo ${cls}
 goto ${menu} ||
