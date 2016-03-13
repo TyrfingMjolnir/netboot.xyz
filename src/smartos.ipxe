@@ -14,7 +14,7 @@ goto smartos_boot
 
 :smartos_boot
 kernel ${memdisk} iso raw
-initrd https://us-east.manta.joyent.com/Joyent_Dev/public/SmartOS/platform-latest.tgz
+initrd https://us-east.manta.joyent.com/Joyent_Dev/public/SmartOS/smartos-latest.iso
 boot
 goto smartos_exit
 
