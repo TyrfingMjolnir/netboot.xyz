@@ -1,0 +1,23 @@
+#!ipxe
+
+# Joyent SmartOS
+# http://smartos.org
+
+goto ${menu}
+
+:smartos
+set os Architect Linux
+menu ${os} Installers
+item x86_64 ${space} ${os} Latest [ISO]
+choose version || goto smartos_exit
+goto smartos_boot
+
+:smartos_boot
+kernel ${memdisk} iso raw
+initrd https://us-east.manta.joyent.com/Joyent_Dev/public/SmartOS/platform-latest.tgz
+boot
+goto smartos_exit
+
+:smartos_exit
+clear menu
+exit 0
