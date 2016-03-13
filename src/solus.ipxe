@@ -1,0 +1,23 @@
+#!ipxe
+
+# Solus Linux Operating System - The U/X linux
+# https://github.com/solus-project/os-installer.git
+
+goto ${menu}
+
+:solus
+set os Solus 1.1 Linux
+menu ${os} Installers
+item x86_64 ${space} ${os} Latest [ISO]
+choose version || goto solus_exit
+goto solus_boot
+
+:solus_boot
+kernel ${memdisk} iso raw
+initrd http://ikeydoherty.com/Solus-1.1.iso
+boot
+goto solus_exit
+
+:solus_exit
+clear menu
+exit 0
